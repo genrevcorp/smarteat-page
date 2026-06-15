@@ -4,64 +4,69 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>SmartEat｜創辦人討論文件 v1</title>
+<title>SmartEat｜產品說明與討論文件 v2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --green:#2f855a; --green-d:#276749; --green-l:#e7f3ec;
     --ink:#1f2933; --muted:#5b6770; --line:#e3e8ec; --bg:#f6f8f7;
-    --amber:#b7791f; --amber-l:#fdf6e3; --card:#ffffff;
+    --amber:#b7791f; --amber-l:#fdf6e3; --card:#fcfdfc;
+    --blue:#2b6cb0; --teal:#2c7a7b;
+    --ease-out:cubic-bezier(0.23,1,0.32,1);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0; font-family:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;
     color:var(--ink); background:var(--bg); line-height:1.8; font-size:17px;
-    -webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing:antialiased; text-wrap:pretty;
   }
-  .wrap{max-width:820px; margin:0 auto; padding:0 20px;}
+  .wrap{max-width:840px; margin:0 auto; padding:0 20px;}
+  a:focus-visible{outline:2px solid var(--green); outline-offset:3px; border-radius:3px;}
+
   header.hero{
     background:linear-gradient(135deg,var(--green) 0%,var(--green-d) 100%);
-    color:#fff; padding:54px 0 46px;
+    color:#fff; padding:56px 0 48px;
   }
-  header.hero .wrap{padding-top:0;}
   .eyebrow{font-size:13px; letter-spacing:.18em; opacity:.85; font-weight:500; margin:0 0 10px;}
-  header.hero h1{font-size:30px; font-weight:900; margin:0 0 14px; letter-spacing:.01em;}
+  header.hero h1{font-size:31px; font-weight:900; margin:0 0 14px; letter-spacing:-.01em; line-height:1.25; text-wrap:balance;}
   .wedge{
-    font-size:19px; font-weight:500; background:rgba(255,255,255,.14);
-    border-left:4px solid rgba(255,255,255,.7); padding:14px 18px; border-radius:8px; margin:0 0 18px;
+    font-size:19px; font-weight:600; background:rgba(255,255,255,.14);
+    padding:15px 18px; border-radius:10px; margin:0 0 18px; text-wrap:balance;
   }
-  .meta{font-size:13.5px; opacity:.9; display:flex; flex-wrap:wrap; gap:8px 18px;}
+  .meta{font-size:13.5px; opacity:.9; display:flex; flex-wrap:wrap; gap:8px 18px; font-variant-numeric:tabular-nums;}
   .meta span{white-space:nowrap;}
 
   nav.toc{
     background:var(--card); border:1px solid var(--line); border-radius:14px;
-    padding:18px 22px; margin:-26px auto 30px; position:relative; box-shadow:0 6px 22px rgba(31,41,51,.06);
+    padding:20px 24px; margin:-28px auto 38px; position:relative; box-shadow:0 8px 24px rgba(39,103,73,.09);
   }
-  nav.toc h2{font-size:14px; color:var(--muted); margin:0 0 10px; letter-spacing:.08em; font-weight:700;}
+  nav.toc h2{font-size:12.5px; color:var(--muted); margin:0 0 12px; letter-spacing:.12em; font-weight:700; text-transform:uppercase;}
   nav.toc ol{margin:0; padding-left:20px; columns:2; column-gap:28px; font-size:15px;}
-  nav.toc li{margin:5px 0; break-inside:avoid;}
-  nav.toc a{color:var(--green-d); text-decoration:none; font-weight:500;}
-  nav.toc a:hover{text-decoration:underline;}
-
-  section{
-    background:var(--card); border:1px solid var(--line); border-radius:14px;
-    padding:28px 28px 24px; margin:0 0 22px; box-shadow:0 2px 10px rgba(31,41,51,.03);
+  nav.toc li{margin:7px 0; break-inside:avoid;}
+  nav.toc a{
+    color:var(--green-d); font-weight:500; text-decoration:underline; text-decoration-color:transparent; text-underline-offset:3px;
+    transition:color 160ms var(--ease-out), text-decoration-color 160ms var(--ease-out);
   }
+  @media (hover:hover) and (pointer:fine){
+    nav.toc a:hover{color:var(--green); text-decoration-color:currentColor;}
+  }
+
+  section{padding:12px 2px 4px; margin:0 0 38px; scroll-margin-top:18px;}
   section h2{
-    font-size:21px; font-weight:900; margin:0 0 6px; color:var(--green-d);
-    display:flex; align-items:baseline; gap:10px;
+    font-size:23px; font-weight:900; margin:0 0 10px; color:var(--green-d);
+    display:flex; align-items:baseline; gap:11px; letter-spacing:-.01em; text-wrap:balance;
   }
   section h2 .num{
     font-size:14px; font-weight:700; color:#fff; background:var(--green);
-    border-radius:8px; min-width:30px; height:30px; display:inline-flex; align-items:center; justify-content:center;
-    flex:none; transform:translateY(-1px);
+    border-radius:9px; min-width:30px; height:30px; display:inline-flex; align-items:center; justify-content:center;
+    flex:none; transform:translateY(-1px); font-variant-numeric:tabular-nums;
   }
-  section h3{font-size:16.5px; font-weight:700; margin:22px 0 6px; color:var(--ink);}
+  section h3{font-size:18.5px; font-weight:600; margin:24px 0 6px; color:var(--ink); letter-spacing:-.005em;}
   p{margin:10px 0;}
-  .lead{font-size:17.5px;}
+  .lead{font-size:18px; line-height:1.72;}
   ul,ol.body{margin:10px 0; padding-left:22px;}
   li{margin:6px 0;}
   strong{font-weight:700;}
@@ -69,59 +74,93 @@
   .sub{color:var(--muted); font-size:15px;}
 
   .callout{
-    background:var(--green-l); border-radius:10px; padding:14px 16px; margin:16px 0; font-size:15.5px;
+    background:var(--green-l); border-radius:12px; padding:15px 18px; margin:16px 0; font-size:15.5px;
     border:1px solid #cfe6d8;
   }
   .note{
-    background:var(--amber-l); border-left:4px solid var(--amber); border-radius:8px;
-    padding:12px 16px; margin:16px 0; font-size:15px; color:#6b5310;
+    background:var(--amber-l); border:1px solid #ecd9a8; border-radius:10px;
+    padding:13px 17px; margin:16px 0; font-size:15px; color:#6b5310;
   }
-  .quote-line{font-size:18px; font-weight:700; color:var(--green-d); margin:6px 0 4px;}
+  .quote-line{font-size:18px; font-weight:700; color:var(--green-d); margin:6px 0 4px; text-wrap:balance;}
 
-  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:15px;}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; font-variant-numeric:tabular-nums;}
   th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top;}
-  th{background:#f0f4f2; font-weight:700; color:var(--ink);}
+  th{background:#eef3f0; font-weight:700; color:var(--ink);}
   td .tag{font-weight:700; color:var(--green-d);}
 
-  .steps{counter-reset:s; list-style:none; padding:0; margin:14px 0;}
-  .steps li{counter-increment:s; position:relative; padding:8px 0 8px 42px; border-bottom:1px dashed var(--line);}
-  .steps li:last-child{border-bottom:none;}
-  .steps li::before{
-    content:counter(s); position:absolute; left:0; top:8px; width:28px; height:28px;
-    background:var(--green); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center;
-    font-size:13px; font-weight:700;
-  }
+  /* feature groups */
+  .features{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 6px;}
+  .feat-group{border:1px solid var(--line); border-radius:12px; padding:18px 20px; background:var(--card);}
+  .feat-group.span2{grid-column:1 / -1;}
+  .feat-group h3{margin:0 0 12px; display:flex; align-items:center; gap:9px; font-size:17px; color:var(--ink); font-weight:700;}
+  .feat-group h3 .chip{font-size:12px; font-weight:700; letter-spacing:.04em; color:#fff; background:var(--green); padding:3px 10px; border-radius:7px;}
+  .feat-group.merchant h3 .chip{background:var(--blue);}
+  .feat-group.admin h3 .chip{background:#6b7280;}
+  .feat-list{list-style:none; margin:0; padding:0; font-size:15px;}
+  .feat-list li{padding:7px 0 7px 22px; position:relative; border-bottom:1px solid #eef1f0;}
+  .feat-list li:last-child{border-bottom:none;}
+  .feat-list li::before{content:"✓"; position:absolute; left:0; top:7px; color:var(--green); font-weight:700;}
+  .badge{font-size:11.5px; font-weight:700; padding:1px 8px; border-radius:6px; margin-left:6px; white-space:nowrap;}
+  .badge.demo{background:#e3f3ef; color:var(--teal); border:1px solid #bfe3dd;}
+  .badge.future{background:#eef2f7; color:#5b6770; border:1px solid #d7dee6;}
 
-  .decide{list-style:none; padding:0; margin:14px 0;}
-  .decide li{
-    padding:13px 14px 13px 44px; position:relative; border:1px solid var(--line);
-    border-radius:10px; margin:10px 0; background:#fbfdfc;
-  }
-  .decide li::before{
-    content:"☐"; position:absolute; left:14px; top:11px; font-size:20px; color:var(--green);
-  }
-  .decide b{display:block; margin-bottom:2px;}
+  /* flow diagrams */
+  .diagram{margin:18px 0; padding:22px 18px; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 2px 12px rgba(39,103,73,.05);}
+  .diagram .cap{font-size:13px; font-weight:700; letter-spacing:.04em; color:var(--muted); margin:0 0 16px; text-align:center; text-wrap:balance;}
 
-  .twocol{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-  .moat{background:#fbfdfc; border:1px solid var(--line); border-radius:10px; padding:14px 16px;}
-  .moat .n{font-size:13px; color:var(--green); font-weight:700; letter-spacing:.06em;}
-  .moat b{display:block; margin:2px 0 4px; font-size:16px;}
+  .triad{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:10px;}
+  .triad .pole{text-align:center;}
+  .triad .pcard{border:1.5px solid var(--line); border-radius:14px; padding:14px 10px; background:#fff;}
+  .triad .pcard.center{border-color:var(--green); background:var(--green-l);}
+  .triad .pcard .icon{font-size:24px;}
+  .triad .pcard .ttl{font-weight:900; margin-top:4px; color:var(--ink);}
+  .triad .pcard .ttl.c{color:var(--green-d);}
+  .triad .pcard .desc{font-size:13px; color:var(--muted); margin-top:4px; line-height:1.5;}
+  .triad .conn{display:flex; flex-direction:column; align-items:center; gap:4px; font-size:12px; color:var(--muted); min-width:96px;}
+  .triad .conn .a{font-size:18px; color:var(--green); line-height:1;}
+  .triad .conn .lbl{line-height:1.4;}
 
-  footer{color:var(--muted); font-size:14px; text-align:center; padding:18px 0 50px;}
-  .totop{display:inline-block; margin-top:8px; color:var(--green-d); text-decoration:none; font-size:14px;}
+  .journey{display:flex; flex-direction:column; gap:0;}
+  .jstep{display:flex; align-items:flex-start; gap:14px; position:relative; padding-bottom:16px;}
+  .jstep:not(:last-child)::after{content:""; position:absolute; left:15px; top:34px; bottom:-2px; width:2px; background:var(--line);}
+  .jstep .dot{flex:none; width:32px; height:32px; border-radius:50%; background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; z-index:1; font-variant-numeric:tabular-nums;}
+  .jstep .jc .jt{font-weight:700;}
+  .jstep .jc .jd{font-size:14px; color:var(--muted);}
+
+  .loop{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px;}
+  .loop .lnode{background:#fff; border:2px solid var(--green); color:var(--green-d); font-weight:700; border-radius:999px; padding:8px 16px; font-size:14.5px;}
+  .loop .larrow{color:var(--green); font-size:18px; font-weight:700;}
+  .loop-back{margin-top:12px; text-align:center; font-size:13.5px; color:var(--muted); font-style:italic; text-wrap:balance;}
+
+  footer{color:var(--muted); font-size:14px; text-align:center; padding:24px 0 50px; font-variant-numeric:tabular-nums;}
+  .totop{
+    display:inline-block; margin-top:12px; color:var(--green-d); text-decoration:none; font-size:14px;
+    transition:color 160ms var(--ease-out), transform 160ms var(--ease-out);
+  }
+  @media (hover:hover) and (pointer:fine){
+    .totop:hover{color:var(--green); transform:translateY(-1px);}
+  }
 
   @media (max-width:640px){
     body{font-size:16px;}
-    header.hero h1{font-size:24px;}
+    header.hero h1{font-size:25px;}
     nav.toc ol{columns:1;}
-    .twocol{grid-template-columns:1fr;}
-    section{padding:22px 18px;}
+    section{padding:10px 0 4px;}
+    .features{grid-template-columns:1fr;}
+    .triad{grid-template-columns:1fr;}
+    .triad .conn{flex-direction:row; min-width:0; padding:4px 0;}
+    .triad .conn .a{transform:rotate(90deg);}
   }
   @media print{
     body{background:#fff; font-size:12pt;}
     nav.toc{box-shadow:none;}
-    section{break-inside:avoid; box-shadow:none; border-color:#ccc;}
+    section,.diagram,.feat-group{break-inside:avoid;}
     header.hero{background:var(--green-d) !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition-duration:0.01ms !important; animation-duration:0.01ms !important;}
+    .totop:hover{transform:none;}
   }
 </style>
 </head>
@@ -129,32 +168,33 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">SMARTEAT（暫定名）｜創辦人內部討論文件</p>
+    <p class="eyebrow">SMARTEAT（暫定名）｜產品說明與討論文件</p>
     <h1>幫你照計畫吃飯的平台</h1>
     <div class="wedge">「你有飲食計畫，我們確保你真的吃到符合計畫的餐。」</div>
     <div class="meta">
-      <span>📄 版本 v1</span>
+      <span>📄 版本 v2</span>
       <span>📅 2026-06-15</span>
       <span>👥 給 Kevin（森作）＋技術夥伴</span>
-      <span>🔒 內部文件・請勿外流</span>
+      <span>🎯 目的：對齊雙方對產品的想像</span>
     </div>
   </div>
 </header>
 
 <div class="wrap">
 
-  <nav class="toc">
+  <nav class="toc" id="toc">
     <h2>目錄</h2>
     <ol>
       <li><a href="#s1">一句話講清楚</a></li>
       <li><a href="#s2">核心定位與差異化</a></li>
-      <li><a href="#s3">商業模式</a></li>
-      <li><a href="#s4">護城河（Moat）</a></li>
-      <li><a href="#s5">市場擴張策略（TAM）</a></li>
-      <li><a href="#s6">第一階段聚焦（MVP / Demo）</a></li>
-      <li><a href="#s7">SBIR Phase 1 提案骨架</a></li>
-      <li><a href="#s8">創辦人需要拍板的決定</a></li>
-      <li><a href="#s9">下一步與時程</a></li>
+      <li><a href="#s3">應用程式功能總覽</a></li>
+      <li><a href="#s4">運作流程（流程圖）</a></li>
+      <li><a href="#s5">商業模式</a></li>
+      <li><a href="#s6">護城河（Moat）</a></li>
+      <li><a href="#s7">市場擴張策略（TAM）</a></li>
+      <li><a href="#s8">第一階段聚焦（MVP / Demo）</a></li>
+      <li><a href="#s9">SBIR Phase 1 提案骨架</a></li>
+      <li><a href="#s10">下一步與時程</a></li>
     </ol>
   </nav>
 
@@ -162,7 +202,7 @@
     <h2><span class="num">1</span>一句話講清楚</h2>
     <p class="lead">市場上「<strong>飲食計畫</strong>」有人做、「<strong>找餐廳做餐</strong>」也有人做，但<span class="hl">「把個人化的營養計畫，自動對應到一間能照計畫出餐的廚房」這件事，目前市場上沒有人做。</span></p>
     <p>SmartEat 要補的就是這個缺口。我們不是「健康餐訂購 App」，而是「<strong>幫你照計畫吃飯</strong>」的平台。</p>
-    <a class="totop" href="#">↑ 回目錄</a>
+    <a class="totop" href="#toc">↑ 回目錄</a>
   </section>
 
   <section id="s2">
@@ -182,33 +222,164 @@
       <tr><td>企業／團體訂餐<br><span class="sub">芒果樹、初茶弁飯…</span></td><td>多家餐廳、企業訂餐物流</td><td>有多商家但<strong>沒有營養層</strong></td></tr>
     </table>
     <div class="callout"><strong>我們的差異：</strong>把上面三塊各自缺的那一塊補起來——<strong>用 AI 自動把個人計畫，變成跨多家廚房、照規格出餐的訂單</strong>。最接近的對手是 COFIT（已有計畫＋商城，但媒合是人工的），需留意它成為快速跟進者。</div>
-    <a class="totop" href="#">↑ 回目錄</a>
+    <a class="totop" href="#toc">↑ 回目錄</a>
   </section>
 
   <section id="s3">
-    <h2><span class="num">3</span>商業模式</h2>
+    <h2><span class="num">3</span>應用程式功能總覽</h2>
+    <p class="sub">這是 App 第一階段（MVP）會有的功能。標記 <span class="badge demo">Demo</span> 的先以展示方式呈現、<span class="badge future">未來</span> 的暫不納入 MVP。</p>
+
+    <div class="features">
+      <div class="feat-group span2 user">
+        <h3><span class="chip">使用者端</span>消費者 App（手機）</h3>
+        <ul class="feat-list">
+          <li>註冊登入：LINE 登入（主要）、Google / Apple</li>
+          <li>健康檔案：性別、年齡、身高、體重、體脂、活動量、疾病、過敏原</li>
+          <li>健康資料輸入：手動輸入體重／體脂／步數；AI 掃描 InBody／血檢報告自動帶入 <span class="badge demo">Demo</span>；Apple Health／Health Connect 同步 <span class="badge future">未來</span></li>
+          <li>目標設定：減脂／增肌／維持體態／控糖／低鈉／高蛋白＋目標體重、目標體脂</li>
+          <li>飲食偏好：喜歡／不喜歡／禁忌食材；葷／蛋奶素／全素</li>
+          <li>AI 配餐：依「健康數據＋目標＋偏好＋商家食材池」自動生成餐盒，並顯示熱量、蛋白質、脂肪、碳水、膳食纖維</li>
+          <li>餐單週期：每日生成 或 一週生成</li>
+          <li>訂閱：午餐／晚餐／午晚餐；週訂閱／月訂閱</li>
+          <li>付款：信用卡、Apple Pay、Google Pay、LINE Pay（透過金流商，支援定期定額）</li>
+          <li>餐盒評分：整體 1～5 星＋細項（蛋白質／主食／蔬菜／口味／飽足感）</li>
+          <li>Health Score：首頁分數＋本週體重／體脂變化＋飲食達成率</li>
+          <li>QR 數位履歷：每盒專屬 QR，顯示營養資訊、食材來源、過敏原、製作與建議食用時間</li>
+        </ul>
+      </div>
+
+      <div class="feat-group merchant">
+        <h3><span class="chip">商家端</span>餐廳後台（網頁）</h3>
+        <ul class="feat-list">
+          <li>商家帳號與權限管理</li>
+          <li>食材管理：名稱、營養資訊、成本、類別</li>
+          <li>供應狀態：可供應／缺貨／暫停（AI 即時參考）</li>
+          <li>菜單模組：蛋白質／主食／蔬菜模組，供 AI 組合</li>
+          <li>AI 推薦結果：今日生成餐盒與份數，方便備料</li>
+          <li>訂單管理：今日／本週訂單、出餐狀態</li>
+          <li>QR 履歷管理：自動生成 QR 與餐盒資料頁</li>
+        </ul>
+      </div>
+
+      <div class="feat-group admin">
+        <h3><span class="chip">平台端</span>管理後台</h3>
+        <ul class="feat-list">
+          <li>使用者管理</li>
+          <li>商家管理</li>
+          <li>食材資料庫</li>
+          <li>AI 規則管理（配餐基準、營養師審核）</li>
+          <li>KPI 儀表板：活躍會員、訂閱率、平均 Health Score、留存率</li>
+        </ul>
+      </div>
+    </div>
+    <a class="totop" href="#toc">↑ 回目錄</a>
+  </section>
+
+  <section id="s4">
+    <h2><span class="num">4</span>運作流程（流程圖）</h2>
+
+    <div class="diagram">
+      <p class="cap">① 三方如何運作</p>
+      <div class="triad">
+        <div class="pole">
+          <div class="pcard">
+            <div class="icon">🧑</div>
+            <div class="ttl">使用者</div>
+            <div class="desc">提供健康數據、目標、偏好</div>
+          </div>
+        </div>
+        <div class="conn">
+          <span class="a">⇄</span>
+          <span class="lbl">數據／目標 →<br>← 餐盒／履歷</span>
+        </div>
+        <div class="pole">
+          <div class="pcard center">
+            <div class="icon">🤖</div>
+            <div class="ttl c">平台 · AI 配餐引擎</div>
+            <div class="desc">媒合計畫與廚房、產生餐盒</div>
+          </div>
+        </div>
+      </div>
+      <div class="triad" style="margin-top:10px;">
+        <div class="pole">
+          <div class="pcard center">
+            <div class="icon">🤖</div>
+            <div class="ttl c">平台 · AI 配餐引擎</div>
+            <div class="desc">把訂單轉成備料清單</div>
+          </div>
+        </div>
+        <div class="conn">
+          <span class="a">⇄</span>
+          <span class="lbl">訂單／備料 →<br>← 食材／菜單模組</span>
+        </div>
+        <div class="pole">
+          <div class="pcard">
+            <div class="icon">🍱</div>
+            <div class="ttl">商家廚房</div>
+            <div class="desc">提供食材、菜單模組、產能</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="diagram">
+      <p class="cap">② 使用者旅程（一次完整體驗）</p>
+      <div class="journey">
+        <div class="jstep"><div class="dot">1</div><div class="jc"><div class="jt">註冊／LINE 登入</div><div class="jd">快速進入，建立帳號</div></div></div>
+        <div class="jstep"><div class="dot">2</div><div class="jc"><div class="jt">建立健康檔案</div><div class="jd">身高體重體脂、疾病、過敏原</div></div></div>
+        <div class="jstep"><div class="dot">3</div><div class="jc"><div class="jt">設定目標</div><div class="jd">例如「減脂，目標體脂 -2%」</div></div></div>
+        <div class="jstep"><div class="dot">4</div><div class="jc"><div class="jt">選擇飲食偏好</div><div class="jd">喜歡／不喜歡／禁忌、葷素</div></div></div>
+        <div class="jstep"><div class="dot">5</div><div class="jc"><div class="jt">AI 自動生成餐盒</div><div class="jd">並顯示熱量與營養分析</div></div></div>
+        <div class="jstep"><div class="dot">6</div><div class="jc"><div class="jt">完成訂閱與付款</div><div class="jd">午／晚餐、週訂或月訂</div></div></div>
+        <div class="jstep"><div class="dot">7</div><div class="jc"><div class="jt">商家收單、備餐、出餐</div><div class="jd">後台看到今日份數</div></div></div>
+        <div class="jstep"><div class="dot">8</div><div class="jc"><div class="jt">取餐＋掃 QR 看數位履歷</div><div class="jd">營養、食材來源、過敏原、食安</div></div></div>
+        <div class="jstep"><div class="dot">9</div><div class="jc"><div class="jt">餐盒評分</div><div class="jd">整體＋細項回饋</div></div></div>
+        <div class="jstep"><div class="dot">10</div><div class="jc"><div class="jt">Health Score 更新</div><div class="jd">首頁看到進度與達成率</div></div></div>
+      </div>
+    </div>
+
+    <div class="diagram">
+      <p class="cap">③ 核心閉環（這就是 SBIR 要證明的事）</p>
+      <div class="loop">
+        <span class="lnode">健康資料</span>
+        <span class="larrow">→</span>
+        <span class="lnode">AI 配餐</span>
+        <span class="larrow">→</span>
+        <span class="lnode">商家生產</span>
+        <span class="larrow">→</span>
+        <span class="lnode">用戶回饋</span>
+        <span class="larrow">→</span>
+        <span class="lnode">AI 優化</span>
+      </div>
+      <div class="loop-back">↻ 回饋與評分讓下一次配餐更準，形成持續優化的循環</div>
+    </div>
+    <a class="totop" href="#toc">↑ 回目錄</a>
+  </section>
+
+  <section id="s5">
+    <h2><span class="num">5</span>商業模式</h2>
     <ul>
       <li><strong>中立的雙邊平台</strong>：像 Uber Eats，但專為「<strong>在意營養計畫的人</strong>」設計。</li>
       <li><strong>軟體 + 服務公司</strong>，最終以軟體公司的方式獲利（媒合費／訂閱／商家服務費）。</li>
       <li><strong>在地優先</strong>：先把新竹做深做透（參考<strong>芒果樹科技</strong>在竹科的打法——在地密度 + 企業通路 + 自有物流）。</li>
     </ul>
-    <div class="note"><strong>需先有共識：</strong>森作是第一個供應商，但平台是<strong>中立</strong>的——未來會（也必須）上架森作的競爭對手。如果做不到這點，「平台」這個論點就不成立。兩位創辦人請先確認願意接受。</div>
-    <a class="totop" href="#">↑ 回目錄</a>
+    <div class="note"><strong>需先有共識：</strong>森作是第一個供應商，但平台是<strong>中立</strong>的——未來會（也必須）上架森作的競爭對手。如果做不到這點，「平台」這個論點就不成立。</div>
+    <a class="totop" href="#toc">↑ 回目錄</a>
   </section>
 
-  <section id="s4">
-    <h2><span class="num">4</span>護城河（Moat）</h2>
+  <section id="s6">
+    <h2><span class="num">6</span>護城河（Moat）</h2>
     <p class="sub">三層，缺一不可。單靠「在地密度」擋不住已經有密度的對手（foodpanda、Uber Eats），所以第 2、3 層才是真正的差異。</p>
-    <div class="twocol">
-      <div class="moat"><span class="n">第 1 層</span><b>在地供給密度</b>先把新竹的供給（餐廳/廚房）與需求（健身房/企業）綁在一起。</div>
-      <div class="moat"><span class="n">第 2 層</span><b>營養資料深度</b>每道餐的營養/食材結構化資料、菜單模組化、營養師審核的配餐邏輯——一般外送平台不會做。</div>
-      <div class="moat"><span class="n">第 3 層</span><b>目標關係</b>我們知道使用者的目標與進度；外送平台不知道。這是長期黏著與數據資產的來源。</div>
-    </div>
-    <a class="totop" href="#">↑ 回目錄</a>
+    <ul>
+      <li><strong>第 1 層・在地供給密度：</strong>先把新竹的供給（餐廳／廚房）與需求（健身房／企業）綁在一起。</li>
+      <li><strong>第 2 層・營養資料深度：</strong>每道餐的營養／食材結構化資料、菜單模組化、營養師審核的配餐邏輯——一般外送平台不會做。</li>
+      <li><strong>第 3 層・目標關係：</strong>我們知道使用者的目標與進度；外送平台不知道。這是長期黏著與數據資產的來源。</li>
+    </ul>
+    <a class="totop" href="#toc">↑ 回目錄</a>
   </section>
 
-  <section id="s5">
-    <h2><span class="num">5</span>市場擴張策略（TAM）</h2>
+  <section id="s7">
+    <h2><span class="num">7</span>市場擴張策略（TAM）</h2>
     <div class="callout"><strong>原則：</strong>把「健康」放在我們的<strong>營養層</strong>，而不是限制在「健康餐廳」這個類別。這樣才能在不失焦的前提下，同時擴大供給與需求。</div>
 
     <h3>供給側：不挑「健康餐廳」，而是「任何能照規格出餐的廚房」</h3>
@@ -216,7 +387,7 @@
       <tr><th>作法</th><th>說明</th></tr>
       <tr><td class="tag">擴大供給定義</td><td>自助餐、便當店、舒肥店、沙拉/輕食、素食、蛋白飲/果昔、低 GI 烘焙、月子餐廚房…只要能照營養規格出餐就算。</td></tr>
       <tr><td class="tag">健康線合作</td><td>與一般餐廳合作「健康線」共同品牌：我們出規格與需求，餐廳用午餐閒置產能出餐，導入門檻低。</td></tr>
-      <tr><td class="tag">商家分級徽章</td><td>「精準配餐」（完全可控，如森作）vs.「健康友善」（部分品項符合）——讓供給可規模化，不用每家都是森作。</td></tr>
+      <tr><td class="tag">商家分級徽章</td><td>「精準配餐」（完全可控，如森作）vs.「健康友善」（部分品項符合）——讓供給可規模化。</td></tr>
     </table>
 
     <h3>需求側：從健身族，擴大到所有「照目標吃飯」的人</h3>
@@ -226,100 +397,67 @@
       <tr><td class="tag">竹科企業員工餐</td><td>芒果樹已驗證的通路；企業付費、量大，可能是真正的<strong>成長引擎</strong>（B2B2C）。</td></tr>
       <tr><td class="tag">產後 / 月子・孕期</td><td>台灣已是高付費意願的成熟品類。</td></tr>
       <tr><td class="tag">銀髮長輩餐</td><td>低鈉/均衡、由子女購買；高齡化、需求大且被低估。</td></tr>
-      <tr><td class="tag">控糖 / 三高（代謝）</td><td>真實且成長中，<strong>但維持「健康/營養師審核」定位，不做醫療宣稱</strong>（法規紅線）。健檢中心/診所可當轉介通路。</td></tr>
+      <tr><td class="tag">控糖 / 三高（代謝）</td><td>真實且成長中，<strong>但維持「健康/營養師審核」定位，不做醫療宣稱</strong>。</td></tr>
     </table>
-    <div class="note"><strong>MVP 階段先只做「健身減脂 + 森作 + 一家健康餐廳」</strong>，其餘客群列為 SBIR 提案的「後續藍圖」——同時也讓計畫故事更大、更值得補助。</div>
-    <a class="totop" href="#">↑ 回目錄</a>
-  </section>
-
-  <section id="s6">
-    <h2><span class="num">6</span>第一階段聚焦（MVP / SBIR Demo）</h2>
-    <p>6 個月內要證明的「閉環」：</p>
-    <p class="quote-line">健康資料 → AI 配餐 → 商家出餐 → 使用者回饋 → AI 優化</p>
-
-    <h3>Demo 十步驟</h3>
-    <ol class="steps">
-      <li>使用者建立健康檔案</li>
-      <li>設定減脂目標</li>
-      <li>選擇飲食偏好</li>
-      <li>AI 自動生成餐盒</li>
-      <li>顯示營養分析</li>
-      <li>完成訂閱</li>
-      <li>商家加入、收到訂單</li>
-      <li>產生 QR 數位履歷</li>
-      <li>使用者評分</li>
-      <li>Health Score 更新</li>
-    </ol>
-
-    <h3>真實 vs. 展示用（Demo 先「做出來給評審看」，不用真的蓋系統）</h3>
-    <table>
-      <tr><th>真實做</th><th>展示用（先模擬）</th></tr>
-      <tr>
-        <td>使用者建檔、目標、偏好、AI 配餐（<strong>基於森作真實菜單與營養資料</strong>）、訂閱紀錄、商家收單、出餐、QR 履歷、評分、Health Score</td>
-        <td>第二家商家（種子帳號）、血檢/InBody 報告掃描（一份預先準備的範例）、Apple Health/Health Connect 同步（先用手動輸入）</td>
-      </tr>
-    </table>
-    <a class="totop" href="#">↑ 回目錄</a>
-  </section>
-
-  <section id="s7">
-    <h2><span class="num">7</span>SBIR Phase 1 提案骨架</h2>
-    <p class="sub">這是骨架，正式提案書會用這個架構擴寫。</p>
-    <ol class="body">
-      <li><strong>計畫名稱（暫）：</strong>AI 精準營養媒合平台——先期研究（Phase 1 先期研究）</li>
-      <li><strong>問題與市場缺口：</strong>「計畫」與「出餐」之間斷裂；健康飲食難以長期執行，缺乏「依個人計畫自動出餐」的服務。</li>
-      <li><strong>解決方案與創新點：</strong>AI 配餐引擎 + 商家食材模組化 + 雙邊媒合；以具公信力的國民飲食指南為配餐基準。</li>
-      <li><strong>技術可行性（6 個月驗證重點）：</strong>閉環跑通；AI 配餐輸出符合營養規格；商家端可實際操作備料與出餐。</li>
-      <li><strong>Demo 閉環：</strong>上方第 6 節的十步驟。</li>
-      <li><strong>商業化與後續藍圖：</strong>TAM 擴張（供給/需求/企業通路）、新竹在地密度、企業員工餐通路。</li>
-      <li><strong>預算：</strong>總計畫經費 <strong>NT$300 萬</strong>；自籌 50%（NT$150 萬）+ 補助 50%（NT$150 萬）；期程 <strong>6 個月</strong>。</li>
-      <li><strong>團隊與分工：</strong>技術/產品（技術夥伴）、餐飲營運與供給（Kevin / 森作）、營養師審核（待確認合作對象）。</li>
-      <li><strong>法規與個資：</strong>以「一般健康 + 營養師審核」定位，不做醫療宣稱；健康資料蒐集與同意依個資法處理。</li>
-    </ol>
-    <div class="note"><strong>補助規則與申請要點（2026 年起，已查證）：</strong>
-      <ul style="margin:8px 0 0;">
-        <li>中央型 Phase 1 個別申請補助上限 <strong>NT$150 萬</strong>、期程 <strong>6 個月</strong>、補助 <strong>≤ 總經費 50%</strong>——與本案規劃一致。AI 智慧應用是 2026 年的重點領域，對我們有利。</li>
-        <li><strong>須先完成公司設立</strong>才能申請（須為中小企業；新公司即可，無營運年限要求）。</li>
-        <li>Phase 1 用<strong>簡報</strong>審查（非完整計畫書），個別申請約 30 分鐘口頭審查——所以「Demo + 簡報」比厚厚的文件更重要。</li>
-        <li><strong>常態收件</strong>（隨時可申請，不必等梯次）。</li>
-        <li><strong>分期撥款</strong>：簽約撥 50%、結案通過再撥 50% → 自籌的 NT$150 萬要先墊付，注意現金流。</li>
-        <li>補助只能用於<strong>研發</strong>；不可補助行銷推廣、顧問費、計畫書/簡報撰寫。預算要編在技術研發（AI 配餐引擎等）。</li>
-        <li><strong>待確認：</strong>確定申請「中央型」而非新竹「地方型」（地方型上限約 NT$100 萬、一年一梯次）。</li>
-      </ul>
-    </div>
-    <a class="totop" href="#">↑ 回目錄</a>
+    <div class="note"><strong>MVP 階段先只做「健身減脂 + 森作 + 一家健康餐廳」</strong>，其餘客群列為後續藍圖——同時也讓計畫故事更大。</div>
+    <a class="totop" href="#toc">↑ 回目錄</a>
   </section>
 
   <section id="s8">
-    <h2><span class="num">8</span>創辦人需要拍板的決定</h2>
-    <ul class="decide">
-      <li><b>中立平台原則</b>我們願意未來上架森作的競爭對手嗎？（平台論點成立的前提）</li>
-      <li><b>股權 / 出資 / IP 歸屬</b>誰出多少、股權怎麼分；平台與資料的 IP 歸屬於新公司。</li>
-      <li><b>公司設立</b>新公司名稱？需在 SBIR 申請前完成設立。</li>
-      <li><b>第一批供給</b>除了森作，第二家健康餐廳是誰？何時上架？</li>
-      <li><b>第一批需求</b>哪一間健身房？怎麼導入會員？是否有合作條件？</li>
-      <li><b>法規界線</b>明確不做醫療宣稱；血檢/InBody 僅作 Demo 展示用途。</li>
-      <li><b>營養師合作</b>是否找一位合作營養師審核配餐規則（提升公信力、降低法規風險）。</li>
-    </ul>
-    <a class="totop" href="#">↑ 回目錄</a>
+    <h2><span class="num">8</span>第一階段聚焦（MVP / Demo）</h2>
+    <p>第一階段我們<strong>不做全部功能</strong>，只把上面第 4 節的「核心閉環」完整跑通一次，證明概念可行。</p>
+    <h3>真實做 vs. 展示用</h3>
+    <table>
+      <tr><th>真實做</th><th>展示用（先模擬）</th></tr>
+      <tr>
+        <td>使用者建檔、目標、偏好、AI 配餐（<strong>基於森作真實菜單與營養資料</strong>）、訂閱付款、商家收單、出餐、QR 履歷、評分、Health Score</td>
+        <td>第二家商家（種子帳號）、血檢/InBody 報告掃描（一份預先準備的範例）、Apple Health/Health Connect 同步（先用手動輸入）</td>
+      </tr>
+    </table>
+    <a class="totop" href="#toc">↑ 回目錄</a>
   </section>
 
   <section id="s9">
-    <h2><span class="num">9</span>下一步與時程</h2>
+    <h2><span class="num">9</span>SBIR Phase 1 提案骨架</h2>
+    <p class="sub">這是骨架，正式提案書會用這個架構擴寫。</p>
     <ol class="body">
-      <li>兩位創辦人對齊上述第 8 節的決定。</li>
+      <li><strong>計畫名稱（暫）：</strong>AI 精準營養媒合平台——先期研究（Phase 1）</li>
+      <li><strong>問題與市場缺口：</strong>「計畫」與「出餐」之間斷裂；缺乏「依個人計畫自動出餐」的服務。</li>
+      <li><strong>解決方案與創新點：</strong>AI 配餐引擎 + 商家食材模組化 + 雙邊媒合；以具公信力的國民飲食指南為配餐基準。</li>
+      <li><strong>技術可行性（6 個月驗證重點）：</strong>核心閉環跑通；AI 配餐輸出符合營養規格；商家端可實際操作。</li>
+      <li><strong>Demo 閉環：</strong>第 4 節的使用者旅程與核心閉環。</li>
+      <li><strong>商業化與後續藍圖：</strong>TAM 擴張（供給／需求／企業通路）、新竹在地密度。</li>
+      <li><strong>預算：</strong>總計畫經費 <strong>NT$300 萬</strong>；自籌 50%（NT$150 萬）+ 補助 50%（NT$150 萬）；期程 <strong>6 個月</strong>。</li>
+      <li><strong>團隊與分工：</strong>技術/產品（技術夥伴）、餐飲營運與供給（Kevin / 森作）、營養師審核（待確認）。</li>
+      <li><strong>法規與個資：</strong>以「一般健康 + 營養師審核」定位，不做醫療宣稱；健康資料依個資法處理。</li>
+    </ol>
+    <div class="note"><strong>補助規則與申請要點（2026 年起，已查證）：</strong>
+      <ul style="margin:8px 0 0;">
+        <li>中央型 Phase 1 個別申請補助上限 <strong>NT$150 萬</strong>、期程 <strong>6 個月</strong>、補助 <strong>≤ 總經費 50%</strong>。AI 智慧應用是 2026 重點領域，對我們有利。</li>
+        <li><strong>須先完成公司設立</strong>才能申請（須為中小企業；新公司即可）。</li>
+        <li>Phase 1 用<strong>簡報</strong>審查（非完整計畫書），個別申請約 30 分鐘口頭審查——「Demo + 簡報」比厚文件更重要。</li>
+        <li><strong>常態收件</strong>（隨時可申請）。<strong>分期撥款</strong>：簽約撥 50%、結案通過再撥 50% → 自籌款要先墊付，注意現金流。</li>
+        <li>補助只能用於<strong>研發</strong>；不可補助行銷推廣、顧問費、計畫書/簡報撰寫。</li>
+      </ul>
+    </div>
+    <a class="totop" href="#toc">↑ 回目錄</a>
+  </section>
+
+  <section id="s10">
+    <h2><span class="num">10</span>下一步與時程</h2>
+    <ol class="body">
+      <li>兩位創辦人對齊本文件對產品的想像。</li>
       <li>用本骨架擴寫成正式 SBIR 提案書。</li>
       <li><strong>人工概念驗證（先不寫程式）：</strong>手動幫 20–30 位健身房/森作既有客戶配餐，量測<strong>第 4–8 週回訂率</strong>與<strong>付費意願</strong>。這一步決定整個生意成不成立。</li>
-      <li>技術夥伴規劃 MVP（技術選型已在另一份文件討論），與團隊確認後開始開發。</li>
+      <li>技術夥伴規劃並開發 MVP。</li>
     </ol>
-    <div class="note"><strong>現金流提醒：</strong>補助款分期撥款（簽約 50%、結案 50%），加上公司須先設立才能申請，請預留自籌資金與墊付的時間差。</div>
-    <a class="totop" href="#">↑ 回目錄</a>
+    <a class="totop" href="#toc">↑ 回目錄</a>
   </section>
 
 </div>
 
 <footer>
-  SmartEat 內部討論文件　|　版本 v1　|　2026-06-15　|　請勿外流
+  SmartEat 產品說明與討論文件　|　版本 v2　|　2026-06-15
 </footer>
 
 </body>
